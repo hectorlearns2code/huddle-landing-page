@@ -53,8 +53,11 @@
     list-style: none;
 }
 
-body {
+html {
     font-size: 18px;
+}
+
+body {
     font-family: "Open Sans"
 }
 
@@ -86,12 +89,11 @@ a, a:visited {
     display: flex;
     flex-wrap: wrap;
     min-height: 440px;
-    max-height: 980px;
-    padding: 0 30px;
+    padding: 0px 30px 0px 120px;
     background: #fff;
     border-radius: 15px;
     margin: 50px 0;
-    justify-content: center;
+    justify-content: space-between;
     @include shadow();
 }
 
@@ -99,18 +101,12 @@ a, a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 480px;
-    flex-wrap: 1;
-}
-
-.card__col--left {
-    margin: 0 120px;
+    width: 45%;
 }
 
 .card__col--img {
     display: flex;
-    max-width: 420px;
-    flex-wrap: 1;
+    width: 40%;
 }
 
 .card__img {
@@ -119,11 +115,12 @@ a, a:visited {
 }
 
 .button {
-    padding: 20px 70px;
+    padding: 1rem 4rem;
     background: hsl(322, 100%, 66%);
     border-radius: 60px;
     border: none;
     margin-top: 40px;
+    font-size: 1rem;
     font-family: "Poppins";
     color: #fff;
     @include shadow();
@@ -131,31 +128,48 @@ a, a:visited {
 
 // HEADER
 .header {
+    padding: 55px 0;
     background: hsl(193, 100%, 96%);
-    padding: 55px 80px;
     background-image: url(../images/bg-hero-desktop.svg);
     background-size: cover;
 }
 
-.header__row {
-
-    max-width: 1280px;
+.container-two {
     margin: 0 auto;
+    width: 88.88%;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
-.hero {
-    margin-top: 70px;
+.brand {
+    display: block;
+    height: max-content;
+    margin: auto 0;
 }
 
 .logo {
     width: 200px;
+    margin: auto 0;
+}
+
+.hero {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 88.88%;
+    max-width: 1280px;
+    display: flex;
+}
+
+.hero__headline {
+    margin-bottom: 50px;
 }
 
 .header__button {
-    padding: 15px 65px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
     background: #fff;
     border-radius: 60px;
     border: none;
@@ -170,10 +184,12 @@ a, a:visited {
 
 .hero__col--img {
     width: 54%;
+    align-self: center;
 }
 
 .hero__img {
     width: 100%;
+    object-fit: contain;
 }
 
 
@@ -197,10 +213,10 @@ a, a:visited {
 .footer {
     background: hsl(192, 100%, 9%);
     color: #fff;
-    padding: 190px 120px 65px 120px;
+    padding: 190px 0 120px 0;
 }
 
-.footer__row {
+.container--footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -226,10 +242,10 @@ a, a:visited {
 
 .contact__icon {
     margin-top: 5px;
-    margin-right: 20px;
 }
 
 .contact__details {
+    margin-left: 20px;
     color: #fff;
 }
 
@@ -243,16 +259,16 @@ a, a:visited {
     margin-bottom: 30px;
 }
 
-.col__social {
+.footer__social {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .social__link  span{
-    padding: 10px;
+    padding: .5rem;
     margin-right: 12px;
-    font-size: 15px;
+    font-size: 1rem;
     border: #fff solid 1px;
     border-radius: 30px;
 
@@ -264,6 +280,214 @@ a, a:visited {
 
 .copyright {
     margin-top: 45px;
-    white-space: nowrap;
 }
 
+
+// MEDIA QUERIES
+@media (max-width: 1023px) {
+    html {
+        font-size: 28px;
+    }
+
+    .container {
+        width: unset;
+        margin: 0px 40px;
+    }
+
+    .button {
+        margin-top: 75px;
+    }
+
+
+    // HEADER
+    .container-two {
+        margin: 0px 40px;
+    }
+
+    .header__button {
+        font-size: .75rem;
+        padding: .4rem 1.5rem;
+    }
+
+
+    // HERO
+    .hero {
+        display: block;
+        margin-top: 175px;
+    }
+
+    .hero__col {
+        width: 100%;
+        margin: auto 0;
+        padding-right: 0;
+
+    }
+
+    .hero__headline {
+        font-size: 1.5rem;
+        margin-bottom: 70px;
+    }
+
+    .hero__col--img {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .hero__col {
+        margin-bottom: 110px;
+        text-align: center;
+    }
+    
+
+
+    // Sections
+    .card {
+        padding: 75px;
+    }
+
+    .card__col {
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    .card__col--img {
+        width: 100%;
+        order: 1;
+    }
+
+    .card__title {
+        margin: 125px 0 40px 0;
+    }
+
+
+    // CTA
+    .cta {
+        width: unset;
+        margin: 0 20px;
+
+        .button {
+            margin-top: 60px;
+        }
+    } 
+
+    .cta__title {
+        font-size: 1.2rem;
+    }
+
+    // FOOTER
+    .footer {
+        padding: 190px 30px 100px 30px; 
+    }
+
+    .logo--white {
+        width: 335px;
+    }
+
+    .footer__col {
+        width: 100%;
+    }
+
+    .footer__list {
+        columns: 1;
+    }
+
+    .contact {
+        max-width: unset;
+    }
+
+    .contact__icon {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+    }
+
+    .contact__details {
+        margin-left: 35px;
+    }
+
+    .footer__social {
+        text-align: center;
+    }
+
+}
+
+@media(max-width:576px) {
+    html {
+        font-size: 16px;
+    }
+
+    .button {
+        margin-top: 25px;
+        padding: .5rem 1.75rem;
+    }
+
+    .container-two {
+        margin: 0 auto;
+    }
+
+
+    // Header
+    .logo {
+        width: 125px;
+    }
+
+
+    // HERO
+    .hero {
+        margin-top: 100px;
+    }
+
+    .hero__col {
+        margin-bottom: 60px;
+    }
+    
+    .hero__headline {
+        margin-bottom: 30px;
+    }
+
+
+    // SECTIONS
+    .card {
+        padding: 30px;
+    }
+
+    .card__title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    // CTA
+    .cta {
+        bottom: -80px;
+    }
+
+    .cta .button {
+        margin-top: 20px;
+    }
+
+
+    // FOOTER
+    .footer {
+        padding: 190px 0 50px 0;
+    }
+
+    .container--footer {
+        margin: 0 auto;
+    }
+
+    .footer__col.links {
+        margin-top: 20px;
+    }
+
+    .footer__list {
+        columns: 2;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+   .footer__item {
+       margin: 0 auto 10px auto;
+   }
+}
