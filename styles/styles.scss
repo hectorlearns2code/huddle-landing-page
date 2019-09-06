@@ -85,6 +85,10 @@ a, a:visited {
     text-decoration: none;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .card {
     display: flex;
     flex-wrap: wrap;
@@ -176,6 +180,11 @@ a, a:visited {
     @include shadow();
 }
 
+.header__button:hover {
+    background-color: hsl(322, 100%, 66%);
+    color: #fff;
+}
+
 .hero__col {
     width: 46%;
     margin: auto 0;
@@ -265,17 +274,31 @@ a, a:visited {
     justify-content: space-between;
 }
 
+
 .social__link  span{
     padding: .5rem;
     margin-right: 12px;
     font-size: 1rem;
     border: #fff solid 1px;
     border-radius: 30px;
-
+    box-sizing: content-box;
 }
 
 .social {
     min-width: 160px;
+}
+
+.icon-facebook:hover {
+    background: #3578E5;
+}
+
+.icon-twitter:hover {
+    background: #1DA1F2;
+}
+
+.icon-instagram:hover {
+    background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
 .copyright {

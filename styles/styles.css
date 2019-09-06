@@ -71,6 +71,10 @@ a, a:visited {
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,6 +190,11 @@ a, a:visited {
   border: none;
   -webkit-box-shadow: 0 0 20px rgba(128, 142, 153, 0.2);
           box-shadow: 0 0 20px rgba(128, 142, 153, 0.2);
+}
+
+.header__button:hover {
+  background-color: #ff52bf;
+  color: #fff;
 }
 
 .hero__col {
@@ -305,10 +314,25 @@ a, a:visited {
   font-size: 1rem;
   border: #fff solid 1px;
   border-radius: 30px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .social {
   min-width: 160px;
+}
+
+.icon-facebook:hover {
+  background: #3578E5;
+}
+
+.icon-twitter:hover {
+  background: #1DA1F2;
+}
+
+.icon-instagram:hover {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 .copyright {
