@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="scripts/header.js"></script>
     <title>Huddle</title>
 </head>
 <body>
@@ -18,19 +19,19 @@
             <button href="#" class="header__button">Try it Free</button>
         </div>
         <div class="section hero">
-            <div class="hero__col">
+            <div class="hero__col reveal--left">
                 <h1 class="hero__headline">Build the Community<br> Your Fans Will Love</h1>
                 <p class="hero__subhead">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussiion.</p>
                 <button href="#" class="button">Get Started For Free</button>
             </div>
-            <div class="hero__col--img">
+            <div class="hero__col--img reveal--right">
                 <img src="images/illustration-mockups.svg" alt="mockups" class="hero__img">
             </div>
         </div>
     </header>
     <main>
         <div class="container">
-            <div class="card">
+            <div class="card reveal--left">
                 <div class="card__col card__col--left">
                     <h2 class="card__title">Grow Together</h2>
                     <p class="card__body">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
@@ -39,7 +40,7 @@
                     <img src="images/illustration-grow-together.svg" alt="grow together" class="card__img">
                 </div>
             </div>
-            <div class="card">
+            <div class="card reveal--right">
                 <div class="card__col--img card__col--left">
                     <img src="images/illustration-flowing-conversation.svg" alt="flowing conversation" class="card__img">
                 </div>
@@ -48,7 +49,7 @@
                     <p class="card__body">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card reveal--left">
                 <div class="card__col card__col--left">
                     <h2 class="card__title">Your Users</h2>
                     <p class="card__body">It takes no time at all to integrate Huddle with your app's authentication solutions. This means, once signed in to your app, your users can start chatting immediately.</p>
@@ -65,7 +66,7 @@
     </main>
     <footer class="footer">
             <div class="container-two container--footer">
-                <img src="images/logo.svg" alt="" class="logo logo--white">
+                <a href=""><img src="images/logo.svg" alt="" class="logo logo--white"></a>
             </div>
             <div class="container-two container--footer footer-links">
                 <div class="footer__col contact">
@@ -120,6 +121,8 @@
                 </div>
             </div>
     </footer>
-    
+
+    <!-- SCRIPTS -->
+    <script src="scripts/footer.js"></script>
 </body>
 </html>
